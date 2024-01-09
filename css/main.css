@@ -1,210 +1,276 @@
 /* ----------------전체 기본 설정-------------- */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 1px solid black;
-     /* 완성 시 삭제 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  /* 완성 시 삭제 */
 }
 
-a{
-    color:black;
-    text-decoration: none; /* 하이퍼링크 밑줄 제거 */
+a {
+  color: black;
+  text-decoration: none; /* 하이퍼링크 밑줄 제거 */
 }
 
-ul{
-    list-style: none; /* 목록의 스타일(앞에 붙는 점) 제거 */
+ul {
+  list-style: none; /* 목록의 스타일(앞에 붙는 점) 제거 */
 }
 
-body{
-    display: flex;
-    flex-direction: column;
+body {
+  display: flex;
+  flex-direction: column;
 
-    /* 최소 화면(기기, 브라우저)의 크기 
+  /* 최소 화면(기기, 브라우저)의 크기 
         화면 크기가 작아져도 유지해야 할 최소 크기*/
-    min-width: 768px;
-    min-height: 100vh; /* 화면 높이 100% */
+  min-width: 768px;
+  min-height: 100vh; /* 화면 높이 100% */
 }
 
 @font-face {
-    font-family: 'JalnanGothic';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "JalnanGothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'GimpoGothicRegular00';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicRegular00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "GimpoGothicRegular00";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/GimpoGothicRegular00.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ----------------------header---------------------- */
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between ;
-    align-items: center;
-    
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.header-container{
-    height: 130px;
-    width: 100%;
+.header-container {
+  height: 130px;
+  width: 100%;
 }
 
 .header-bar {
-    height: 40%;
-    background-color: black;
+  height: 40%;
+  background-color: black;
 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.header-bar .bar-manu{
-    height: 60%;
-    font-size: .65rem;
-    color: white;
-    
-
+.header-bar .bar-manu {
+  height: 60%;
+  font-size: 0.65rem;
+  color: white;
 }
 .header-bar .bar-manu > img {
-    height: 100%;
+  height: 100%;
 }
-.bar-manu:hover{
-    text-decoration: underline;
-}
-
-.header-bar2{
-    padding: 0px 10%;
-    width: 100%;
-    height: 60%;
-    display: flex;
+.bar-manu:hover {
+  text-decoration: underline;
 }
 
-.logo{
-    display: flex;
-    align-items: center;
-}
-.header-bar2 > .logo > img{
-    width: 80%;
-    margin: 10px 5px;
+.header-bar2 {
+  padding: 0px 10%;
+  width: 100%;
+  height: 60%;
+  display: flex;
 }
 
-
-.search{
-    position: relative;
-    width: 100%; 
-    display: flex; 
-    flex-direction: row-reverse;
-    align-items: center;
-    
+.logo {
+  display: flex;
+  align-items: center;
 }
-.search > input{
-    font-family: 'GimpoGothicRegular00';
-    font-size: 14px;
-    margin-left: 15px; 
-    border-radius: 8px;
-    padding: 10px 12px;
-    width: 100%;
+.header-bar2 > .logo > img {
+  width: 80%;
+  margin: 10px 5px;
 }
 
-.search > input:hover{
-    background-color:#e0e0e0 ;
+.search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.search > input {
+  font-family: "GimpoGothicRegular00";
+  font-size: 14px;
+  margin-left: 15px;
+  border-radius: 8px;
+  padding: 10px 12px;
+  width: 100%;
 }
 
-.search > img{
-    position: absolute;
-    width: 30px;
-    margin-right: 12px;
-    margin-top: 2px;
-
+.search > input:hover {
+  background-color: #e0e0e0;
 }
 
-
-.login{
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    
+.search > img {
+  position: absolute;
+  width: 30px;
+  margin-right: 12px;
+  margin-top: 2px;
 }
-.login > a:hover{background-color:#e0e0e0 ;}
+
+.login {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.login > a:hover {
+  background-color: #e0e0e0;
+}
 
 .login > a {
-    width: 160px;
-    margin: 10px 0px;
-    padding:5px 20px;
-    font-family: 'GimpoGothicRegular00';
-    font-size: .8em;
-    border-radius: 8px;
+  width: 160px;
+  margin: 10px 0px;
+  padding: 5px 20px;
+  font-family: "GimpoGothicRegular00";
+  font-size: 0.8em;
+  border-radius: 8px;
 }
 
-.heart{
-    display: flex;
-    align-items: center;
-    margin: 5px;
+.heart {
+  display: flex;
+  align-items: center;
+  margin: 5px;
 }
-.heart img:hover{background-color:#e0e0e0 ;}
-
-.heart>img{
-    width: 30px;
+.heart img:hover {
+  background-color: #e0e0e0;
 }
 
-.cart{
-    display: flex;
-    align-items: center;
-    margin: 5px;
-}
-.cart > img:hover{background-color:#e0e0e0 ;}
-.cart > img{
-    width: 30px;
+.heart > img {
+  width: 30px;
 }
 
+.cart {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.cart > img:hover {
+  background-color: #e0e0e0;
+}
+.cart > img {
+  width: 30px;
+}
 
 /* --------------------navbar------------------ */
-.navbar{
-    height: 50px;
-    padding: 0px 10%;
-    display: flex;
-    align-items: center;
-    background-color: white;
-    position: sticky;
-    top: -1px;
-    z-index: 1000;
-    border: 0.5px solid gray;
+.navbar {
+  height: 50px;
+  padding: 0px 10%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  top: -1px;
+  z-index: 1000;
+  border-top: 0.5px solid gray;
+  border-bottom: 0.5px solid gray;
 }
 
-.navbar  a{
-    margin: 0px 8px;
-    font-family: 'GimpoGothicRegular00';
+.navbar a {
+  margin: 0px 8px;
+  font-family: "GimpoGothicRegular00";
 }
 
-.navbar a:hover{text-decoration: underline;}
-
+.navbar a:hover {
+  text-decoration: underline;
+}
 
 /* ---------------------------main-content1--------------------------- */
-.main{
-    display: flex;
-    justify-content: center;
+main {
+  display: flex;
+  justify-content: center;
 }
-.main-content1{
-    width: 868px;
-    display: flex;
-    flex-direction: column;
+.main-content1 {
+  width: 880px;
+  display: flex;
+  flex-direction: column;
 }
-.main-content1 > h1{
-    font-family: 'GimpoGothicRegular00';
-    font-size: 30px;
-}
-
-.main-row1{
-    padding: 0px 10px;
-    display: flex;
-    flex-wrap: wrap;
+.main-content1 > h1 {
+  margin: 20px 0px 0px 0px;
+  font-family: "GimpoGothicRegular00";
+  font-size: 30px;
 }
 
+.main-row1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-col {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+}
 
+/* -----------------------footer---------------------- */
 
+hr {
+  color: #d8d8d8;
+}
+footer {
+  height: auto;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 
+.footer-content1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.footer-content1 h3 {
+  font-family: "GimpoGothicRegular00";
+}
+.footer-content1 p {
+  font-family: "GimpoGothicRegular00";
+  font-size: 14px;
+  white-space: pre-line;
+}
+.footer-content1 a {
+  font-family: "GimpoGothicRegular00";
+}
+.footer-content1 a:hover {
+  text-decoration: underline;
+}
+
+.footer-content1 button {
+  font-family: "GimpoGothicRegular00";
+  background-color: black;
+  color: white;
+}
+
+.footer-content2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "GimpoGothicRegular00";
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.f-content2-list .list_text {
+  font-weight: bold;
+}
+
+.list-item {
+  color: #424242;
+  font-size: 13px;
+}
+
+.list-item:hover {
+  text-decoration: underline;
+}
