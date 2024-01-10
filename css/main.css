@@ -163,6 +163,15 @@ header {
 }
 
 /* --------------------navbar------------------ */
+nav{
+  display: flex;
+  background-color: white;
+  position: sticky;
+  top: -1px;
+  z-index: 1000;
+  border-top: 0.5px solid gray;
+  border-bottom: 0.5px solid gray;
+}
 .navbar {
   height: 50px;
   padding: 0px 10%;
@@ -172,8 +181,7 @@ header {
   position: sticky;
   top: -1px;
   z-index: 1000;
-  border-top: 0.5px solid gray;
-  border-bottom: 0.5px solid gray;
+
 }
 
 .navbar a {
@@ -189,27 +197,143 @@ header {
 main {
   display: flex;
   justify-content: center;
-}
-.main-content1 {
-  width: 880px;
-  display: flex;
+  flex-grow:1;
   flex-direction: column;
+  align-items: center;
 }
-.main-content1 > h1 {
+
+.main1{
+  width: 1300px;
+}
+
+.main2{
+  width: 1300px;
+}
+
+.main3{
+  width: 1300px;
+
+  display: flex;
+  justify-content: space-between;
+}
+main h1{
   margin: 20px 0px 0px 0px;
   font-family: "GimpoGothicRegular00";
   font-size: 30px;
 }
-
-.main-row1 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.main-col {
-  padding: 2px;
+.main-content1 {
+  min-width: 800px;
   display: flex;
   flex-direction: column;
 }
+
+.main-row1 {
+  margin: auto;
+  padding:2px;
+  display: flex;
+  justify-content:space-evenly ;
+}
+.main-col {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly ;
+  flex-wrap: wrap;
+}
+.main-col a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.btn-img{
+  object-fit: cover;
+  padding: 2px;
+  max-width:300px;
+}
+
+.btn-img1{
+  max-width: 700px;
+}
+.btn-img4{
+  max-width: 300px;
+  height:400px;
+}
+
+.main-col a:hover .btn-img{
+  transform: scale(1.02);
+  transition-duration: 0.25s;
+}
+
+
+.main-content2 {
+  margin-top: 100px;
+  max-width: 1300px;
+  flex-direction: column;
+}
+
+.main2{
+  background-color: #f8f8f8;
+
+}
+
+.scroll{
+  max-width: 1300px;
+  overflow-x:auto ;
+  white-space: nowrap;
+}
+
+.scroll-item{
+  display: inline-block;
+  background-color: #fff;
+}
+
+.scroll-item{
+  max-width: 200px;
+}
+.s-img{
+  max-width:100% ;
+  height:250px ;
+}
+
+.main-content3 {
+  margin-top: 100px;
+  flex-direction: column;
+}
+.img-text{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+.img-text a{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 300px;
+  min-width: 200px;
+}
+
+.img-text a:hover{
+  background-color: #CA5008;
+}
+
+.img-text p{
+  padding: 3px;
+  font-family: "GimpoGothicRegular00";
+  font-size: 20px;
+  width: 100%;
+  height: 350px;
+  white-space: pre-line;
+  background-color: #fff7c9d2;
+}
+
+.i-img{
+  width: 100%;
+  height: 300px;
+}
+
+
+
 
 /* -----------------------footer---------------------- */
 
@@ -273,4 +397,60 @@ footer {
 
 .list-item:hover {
   text-decoration: underline;
+}
+
+
+
+
+
+@media screen and (max-width:1500px){
+  /* 화면 너비가 0~1500px 사이일 때 적용할 CSS코드 작성 */
+
+  /* 1500px 이하일 때 사이드 메뉴가 보이지 않게 함 */
+  aside{
+  display:none;
+      }
+}
+
+@media screen and (max-width:1300px){
+   /* 화면 너비가 0~1024px 사이일 때 적용할 CSS코드 작성 */
+
+   .main1{width: auto;}
+   .main1 *{
+    width: 70%;
+   }
+
+   .main2{width: auto;}
+   .main2 *{
+    width: 70% !important;
+   }
+
+   .main3{ width: auto; }
+   
+   .main3 a *{
+    width: 70% !important;
+   }
+
+  }
+
+@media screen and (max-width:800px){
+  /* 화면 너비가 0~800px 사이일 때 적용할 CSS코드 작성 */
+
+  .main1{width: auto;}
+  .main1 *{
+    width: 50%;
+   }
+   
+  .main2{width: auto;}
+   .main2 *{
+    width: 50%;
+   }
+
+   
+  .main3{width: auto;}
+   .main3 *{
+    width: 50%;
+   }
+
+
 }
