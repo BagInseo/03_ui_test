@@ -253,12 +253,23 @@ main h1{
 .btn-img1{
   max-width: 700px;
 }
+
 .btn-img4{
   max-width: 300px;
   height:400px;
 }
 
 .main-col a:hover .btn-img{
+  transform: scale(1.02);
+  transition-duration: 0.25s;
+}
+
+.main-col a:hover .btn-img1{
+  transform: scale(1.02);
+  transition-duration: 0.25s;
+}
+
+.main-col a:hover .btn-img4{
   transform: scale(1.02);
   transition-duration: 0.25s;
 }
@@ -272,11 +283,11 @@ main h1{
 
 .main2{
   background-color: #f8f8f8;
+  width: auto;
 
 }
 
 .scroll{
-  max-width: 1300px;
   overflow-x:auto ;
   white-space: nowrap;
 }
