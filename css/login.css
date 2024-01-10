@@ -108,7 +108,6 @@
   }
 
   .login-input{
-    width: 80%;
     margin: auto;
   }
 
@@ -143,7 +142,6 @@
 
  
   .login-pw-input{
-    width: 80%;
     margin: 35px auto;
   }
   .pw-input-area{
